@@ -7,5 +7,4 @@ if ! command -v ytt > /dev/null 2>&1; then
     exit 1
 fi
 
-helm-docs "${@}"
-ytt "${@}" --data-values-schema-inspect --output openapi-v3 > docs/ytt-schema.yaml
+ytt -f schema.yaml --data-values-schema-inspect --output openapi-v3 > ./docs/ytt-schema.yaml
