@@ -1,0 +1,9 @@
+- id: ytt-open-api
+  args: []
+  description: Uses 'ytt' to create open api documentation from the schema.yaml file, and inserts the result into a corresponding 'open-api.yaml' file.
+  entry: git-hook/ytt-open-api
+  files: ((schema)\.yaml)$
+  language: script
+  name: ytt open api generator
+  require_serial: true
+
